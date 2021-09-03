@@ -3,27 +3,12 @@ html {
   font-family: 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', sans-serif;
   color: #222;
 }
-  @media screen and (max-width: 767px) {
-      html{
-    font-size: 15px;
-  }
-  }
 header{
     display: block
 }
 a {
   color: #222;
   text-decoration: none;
-}
-@media screen and (max-width: 1080px) {
-    main {
-        padding-top: 60px;
-  }
-}
-@media screen and (max-width: 767px) {
-    main{
-        padding-top: 52px;
-    }
 }
 body {
   font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
@@ -36,6 +21,11 @@ body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4
 body {
     -webkit-font-smoothing: antialiased;
 }
+
+.pc-dn {
+    display: none !important;
+}
+
 /*ヘッダー */ 
 .header-width{
     max-width: 100%;
@@ -48,25 +38,7 @@ body {
   width: 100%;
   position: absolute;
 }
-@media screen and (max-width:1080px) {
-    .site-hedder {
-    position: fixed;
-    background-color: #fff;
-    z-index: 10;
-    width: 100%;
-}
-}
-@media screen and (max-width: 767px) {
-    .site-hedder {
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .site-header-inner > *:last-child {
-      display:inline-flex;
-    }
-  }
+
 .header-logo-pc{
     height:20px;
 }
@@ -150,19 +122,9 @@ ul,ol{
     background-size: auto 100%;
     background-position: right 0;
     background-repeat: no-repeat;
-}
-@media screen and (min-width:767px) {
-    .section-top-hero { 
-        background-image:url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/top-hero.png);
-}
-}
-@media screen and (max-width:767px) {
-    .section-top-hero {
-    padding-top: 258px;
-    padding-bottom: 12px;
-    background-image:url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/top-hero-sp.png);
-}
-}
+    background-image:url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/top-hero.png);
+    }
+    
 .content-width {
     max-width: 1140px;
     padding-left: 50px;
@@ -197,16 +159,7 @@ ul,ol{
     width: 154px;
     height: 154px;
 }
-@media screen and (max-width: 1024px) {
-    .top-hero-box .No1-notation img {
-        display:block;
-    }
-}
-@media screen and (max-width: 1024px) {
-    #notation {
-        display:block;
-    }
-}
+
 .top-hero-box .No1-notation {
     margin: 0;
     position: absolute;
@@ -238,16 +191,11 @@ img {
     width: 100%;
     margin-bottom: 50px;
 }
-@media screen and (max-width:1080px) {
-    .banner-for-students--pc {
-    display:none;
-    }
+
+.banner-for-students--sp {
+display:none;
 }
-@media screen and (min-width:1080px) {
-    .banner-for-students--sp {
-    display: none;
-}
-}
+
 .top-about .contents-tidy {
     align-items: center;
 }
@@ -269,6 +217,10 @@ img {
     margin-top: 15px;
     line-height: 2.3;
 }
+.about-text + .top-about-button {
+    margin-top: 40px;
+    width: 250px;
+}
 .link-button.inversion {
     color: #f79314;
     background-color: #fff;
@@ -276,9 +228,6 @@ img {
 }
 .top-about-content{
     display:flex;
-}
-.inversion{
-    width:320px;
 }
 .main-section {
     padding-top: 75px;
@@ -377,6 +326,9 @@ img {
     cursor: pointer;
     display: contents;
 }
+.SuccessStoriesList__link:hover {
+    color: #f79314;
+}
 .SuccessStory__intro {
     color: #333;
     font-size: 16px;
@@ -432,7 +384,7 @@ img {
 .desc-list .example-contents {
     margin: 32px 0 10px 0;
 }
-.example-contents.contents-tidy {
+.desc-list .example-contents.contents-tidy {
     flex-wrap: wrap;
 }
 .desc-list .example-contents-company > li {
@@ -664,19 +616,7 @@ sc-list .example-contents-company .img-box {
     font-family: 'Lato', sans-serif;
     font-weight: 900;
 }
-.pc-dn {
-    display: none !important;
-}
-@media screen and (max-width: 767px) {
-    .pc-dn {
-        display: block !important;
-    }
-}
-@media screen and (max-width: 767px) {
-    .sp-dn {
-        display: none !important;
-  }
-}
+
 .section-sub-heading > span {
     font-family: 'Lato', sans-serif;
 }
@@ -837,6 +777,7 @@ sc-list .example-contents-company .img-box {
     position: absolute;
     top: 0;
     left: 0;
+    object-fit: cover;
 }
 .hover-scale {
     transition: transform 0.2s;
@@ -1010,144 +951,448 @@ a:hover .hover-text-color, .hover-text-color:hover {
     border-left: solid 3px #fff;
     border-top: solid 3px #fff;
 }
+
+.footer-info .footer-address + .footer-social {
+    margin-top: 35px;
+}
+
 /*メディアクエリ*/
-@media screen and (max-width: 767px) {
-    .site-header {
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-}
-@media screen and (max-width: 767px) {
-    .site-header > .site-header-logo {
-    display: inline-block;
-    width: auto;
-    height: 16px;
+@media screen and (max-width:1024px) {
+    main {
+    padding-top: 60px;
     }
-}
-@media screen and (max-width: 1080px) {
+    
     .header-nav-list {
-      overflow-y: scroll;
-      position: fixed;
-      top: 60px;
-      left: 100%;
-      width: 100%;
-      display: block;
-      padding-top: 20px;
-      padding-bottom: 75px;
-      transition: transform 0.5s;
-      z-index: 99;
-      background-color: rgba(0, 0, 0, 0.8);
-      -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+    position: fixed;
+    top: 60px;
+    left: 100%;
+    width: 100%;
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 75px;
+    transition: transform 0.5s;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.8);
+    -webkit-overflow-scrolling: touch;
     }
-}
- @media screen and (max-width: 767px) {
-    .header-nav-list {
-      top: 52px;
+    
+    .site-hedder {
+    position: fixed;
+    background-color: #fff;
+    z-index: 10;
+    width: 100%;
     }
- }
- @media screen and (max-width: 1080px) {
+    
     .site-header.is-active {
-        transform: translate3d(-100%, 0, 0);
-      }
- }
-  @media screen and (max-width: 1080px) {
+    transform: translate3d(-100%, 0, 0);
+    }
+    
     .site-header.is-scroll {
-        top: 60px;
-        bottom: 0;
-      }
- }
-@media screen and (max-width: 767px) {
-    .site-header {
-    top: 52px;
+    top: 60px;
     bottom: 0;
     }
-}
-@media screen and (max-width: 1080px) {
+    
     .site-header li {
     margin-left: 0;
     }
-}
-@media screen and (max-width: 1080px) {
+    
     .site-header li + li{
     margin-left: 0;
     }
-}
-@media screen and (max-width: 1080px) {
+    
     .header-nav-item {
     padding: 20px 0;
     }
-}
- @media screen and (max-width: 1080px) {
+    
     .header-nav-item > span {
-        font-size: 16px;
-        letter-spacing: 5px;
-        color: #fff;
-}
-}
-/*&:last-child {
-        font-size: 10px;
-
-        @media screen and (max-width: 1080px) {
-          font-size: 12px;
-          margin-top: 10px;
-          color: #f79314;
-          letter-spacing: 2px;
-*/
-@media screen and (max-width: 1024px) {
+    font-size: 16px;
+    letter-spacing: 5px;
+    color: #fff;
+    }
+    
     .top-about-content {
-        flex-direction: column;
-        width: 100%;
-  }
-}
-@media screen and (max-width: 1024px) {
+    flex-direction: column;
+    width: 100%;
+    }
+    
     .top-about-button {
     width: 100%;
-  }
-}
-@media screen and (max-width: 767px) {
-.about-text h2 {
-    font-size: 26px;
-    text-align: center;
-}
-}
-@media screen and (max-width: 767px) {
-.about-text h2 > span {
-    font-size: 30px;
-}
-}
-@media screen and (max-width: 767px) {
-.content-width {
-    max-width: none;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-}
-@media screen and (max-width: 767px) {
-    .about-text {
-        width: 100%;
     }
-} 
-@media screen and (max-width: 767px) {
-.main-section.top-about {
-    padding: 30px 0;
-}
-}
-@media screen and (max-width: 1024px) {
+  
     .top-about-button {
         display:flex;
         justify-content:center;
         align-items:center;
     }
-}
-@media screen and (max-width: 767px) {
-    .section-main-heading {
-        text-align: center;
-        font-size: 26px !important;
-        line-height: 1.2;
+    
+    .top-hero-box .No1-notation {
+    top: -168px;
+    right: 0;
+    left: -28px;
+    }
+    
+    .about-text {
+    width: 100% !important;
+    }
+    
+    .SuccessStory {
+    padding-left: 10px;
+    padding-right: 10px;
+    }
+    
+    .message-contents {
+    flex-direction: column;
+    position: relative;
+    background-color: #fff;
+    padding: 45px 40px 40px;
+    }
+    
+    .message-text {
+    padding: 0;
+    margin-right: 0;
+    margin-top: 30px;
+    order: 2;
+    }
+    
+    .message-thumbnail {
+    order: 1;
+    }
+    
+    .message-thumbnail > img {
+    width: 100%;
+    }
+    
+    .interview-list {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 160px;
+    }
+    
+    .interview-list > li {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
     }
 }
-@media screen and (max-width: 767px) {
+
+@media screen and (max-width:840px) {
+    .interview-list {
+    padding: 0 80px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    html{
+    font-size: 15px;
+    }
+    
+    main {
+    padding-top: 52px;
+    }
+    
+    .site-header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    top: 52px;
+    bottom: 0;
+    }
+    
+    .site-header > .site-header-logo {
+    display: inline-block;
+    width: auto;
+    height: 16px;
+    }
+    
+    .header-nav-list {
+    top: 52px;
+    }
+    
+    .about-text h2 {
+    font-size: 26px;
+    text-align: center;
+    }
+    
+    .about-text h2 > span {
+    font-size: 30px;
+    }
+    
+    .content-width {
+    max-width: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+    
+    .banner-for-students--pc {
+    display: none;
+    }
+    
+    .banner-for-students--sp {
+    display: block;
+    }
+    .main-section.top-about {
+    padding: 30px 0;
+    }
+    
+    .section-main-heading {
+    text-align: center;
+    font-size: 26px !important;
+    line-height: 1.2;
+    }
+    
     .section-sub-heading {
         font-size: 14px;
     }
+    
+    .desc-list .list-no {
+    font-size: 30px;
+    height: 80px;
+    margin-top: -70px;
+    width: 80px;
+    }
+    
+    .section-header h2 > span {
+    font-size: 30px;
+    letter-spacing: 1px;
+    }
+
+    .site-header-inner > *:last-child {
+      display:inline-flex;
+    }
+    
+    .section-top-hero {
+    padding-top: 258px;
+    padding-bottom: 12px;
+    background-image:url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/top-hero-sp.png);
+    }
+    
+    .desc-list > li {
+    padding: 30px 20px 20px 20px;
+    }
+    
+    .desc-list .example {
+    padding: 20px;
+    }
+    
+    .desc-list .list-title {
+    font-size: 20px;
+    margin-top: -10px;
+    }
+    
+    .desc-list .list-text {
+    font-size: 15px;
+    line-height: 2.2;
+    }
+    
+    .section-main-heading {
+    text-align: center;
+    font-size: 26px !important;
+    line-height: 1.2;
+    }
+    
+    .section-sub-heading {
+    font-size: 14px;
+    }
+    
+    .SuccessStories__title > h4 {
+    font-size: 16px;
+    }
+    
+    .SuccessStories__title > img {
+    margin-left: 5px;
+    width: 24px;
+    }
+    
+    .SuccessStories__title::after {
+    margin-top: 5px;
+    }
+    
+    .SuccessStory {
+    align-items: center;
+    margin-bottom: 40px;
+    padding-right: 0;
+    width: 100%;
+    }
+    
+    .SuccessStory::after {
+    margin-right: 6px;
+    }
+    
+    .CorporateInterviewCard--with-link {
+    padding: 20px 20px 30px;
+    }
+    
+    .CorporateInterviewCard {
+    display: block;
+    margin: 0 auto 25px;
+    padding: 20px;
+    }
+    
+    .CorporateInterviewCard__left {
+    margin-bottom: 16px;
+    }
+    
+    .CorporateInterviewCard__left img {
+    width: 100%;
+    }
+    
+    .CorporateInterviewCard__left span {
+    display: block;
+    }
+    
+    .CorporateInterviewCard__right {
+    margin: 0;
+    }
+    
+    .CorporateInterviewCard__link {
+    align-items: center;
+    margin-top: 25px;
+    position: static;
+    text-align: right;
+    }
+    
+    .engineer-list {
+    width: 100%;
+    display: block;
+    }
+    
+    .desc-list > li + li {
+    margin-top: 90px;
+    }
+    
+    .engineer-media {
+    display: block;
+    width: 100%;
+    }
+    
+    .engineer-media {
+    margin-bottom: 20px;
+    }
+    
+    .engineer-profile {
+        display: block;
+    }
+    
+    .engineer-list .engineer-box {
+    width: 100%;
+    }
+    
+    .engineer-conpany-logo > img {
+    width: 70%;
+    }
+    
+    .desc-list .example-company {
+    padding: 20px;
+    }
+    
+    .desc-list .example-contents-company > li {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    }
+    
+    .course-media {
+    flex-direction: column;
+    padding: 25px;
+    }
+    
+    .course-title {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    }
+    
+    .course-contents {
+    width: 100%;
+    margin-top: 25px;
+    padding-right: 0;
+    }
+    
+    .course-text {
+    line-height: 1.5;
+    }
+    
+    .course-link {
+    position: static;
+    text-align: right;
+    margin-top: 25px;
+    padding-right: 20px;
+    }
+    
+    .section-button {
+    margin-top: 40px;
+    max-width: 250px;
+    }
+    
+    .message-title {
+    font-size: 32px;
+    background: -webkit-linear-gradient(0deg, #ff802c, #f79214);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+    
+    .pc-dn {
+    display: block !important;
+    }
+    
+    .hover-opacity:hover {
+    opacity: 1;
+    }
+    
+    .site-footer {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    }
+    
+    .page-top-button {
+    right: 20px;
+    top: -85px;
+    }
+    
+    .site-footer-main {
+    display: block;
+    text-align: center;
+    }
+    
+    .site-footer-main .footer-nav {
+    text-align: left;
+    margin-left: 20px;
+    }
+    
+    .site-footer-main .footer-nav-and-character {
+    margin-top: 30px;
+    }
+    
+    .site-footer-main .footer-nav-and-character .footer-character {
+    margin: 34px auto;
+    }
+    
+    .site-footer-main * + .footer-info {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #fff;
+    }
+    
+    .footer-info .footer-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    
+    .footer-info .footer-social {
+    justify-content: center;
+    }
+    
+    .site-footer-sub {
+    text-align: center;
+    }
+}
+
+    @media screen and (max-width: 560px) {
+    .interview-list {
+    padding-left: 40px;
+    padding-right: 40px;
+    }
+    
 }
